@@ -2,7 +2,7 @@ const fs = require("fs"),
     path = require("path");
 
 module.exports = {
-    loadModulesEndingWith(conventionString, dir) {
+    loadModulesEndingWithFrom(conventionString, dir) {
         const results = [];
 
         fs.readdirSync(dir)

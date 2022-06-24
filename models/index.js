@@ -1,8 +1,8 @@
-const dirLoader = require("../utils/dirLoader"),
+const { dirLoader } = require("../utils"),
     modelsMap = {};
 
 dirLoader
-    .loadModulesEndingWith("-model", __dirname)
+    .loadModulesEndingWithFrom("-model", __dirname)
     .forEach(model => modelsMap[model.modelName] = model);
 
 module.exports = modelsMap;
